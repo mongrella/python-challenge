@@ -16,15 +16,24 @@ with open(csvpath) as csvfile:
 
 #Create lists to store data
 count_votes = 0
-total_votes = []
+votes = []
 candidates = []
-unique_candidate =[]
+unique_candidate = []
 vote_percent = []
 
+#Begin loop
 #Count total number of votes cast [Sum of votes]
-
+for row in csvreader:
+    #count total number of votes
+    count_votes = count_votes + 1
 
 #list of candidates who received votes [Unique names in Column 2]
+#This portion of code from https://www.geeksforgeeks.org/python-get-unique-values-list/
+#check if exists in unique_candidate or not
+    if row[2] not in unique_candidate:
+        unique_candidate.append(row[2])
+    total_votes.append(row[2])
+     
 
 #percentage of votes each candidate won [Total number of votes per candidate / sum of votes]
 

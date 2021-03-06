@@ -5,7 +5,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv')
+csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv')
 
 #Create lists to store data
 output_rows = []
@@ -21,7 +21,7 @@ with open(csvpath) as csvfile:
     header = next(csvreader)
 
 
-#Total number of votes cast
+#Count total number of votes cast
 
 #list of candidates who received votes
 
@@ -34,7 +34,7 @@ with open(csvpath) as csvfile:
 
 # Specify the file to write to (txt file in the Analysis folder)
 
-output_path = os.path.join("..", "Analysis", "new_pybank.txt")
+output_path = os.path.join("..", "Analysis", "new_pypoll.txt")
 
 with open(output_path, "w", newline= '', encoding ='utf8') as datafile:
     writer = csv.writer(datafile)

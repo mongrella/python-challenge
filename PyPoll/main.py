@@ -7,12 +7,6 @@ import csv
 # Set path for file
 csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv')
 
-#Create lists to store data
-output_rows = []
-date = []
-profit []
-total_profit_change = []
-average_profit_change = []
 
 # Open and read the CSV
 with open(csvpath) as csvfile:
@@ -20,17 +14,24 @@ with open(csvpath) as csvfile:
     # skip the first row of the CSV file
     header = next(csvreader)
 
+#Create lists to store data
+count_votes = 0
+total_votes = []
+candidates = []
+unique_candidate =[]
+vote_percent = []
 
-#Count total number of votes cast
+#Count total number of votes cast [Sum of votes]
 
-#list of candidates who received votes
 
-#percentage of votes each candidate won
+#list of candidates who received votes [Unique names in Column 2]
+
+#percentage of votes each candidate won [Total number of votes per candidate / sum of votes]
 
 
 #Total number of votes each candidate won
 
-#Election winner based on popular vote
+#Election winner based on popular vote [max value]
 
 # Specify the file to write to (txt file in the Analysis folder)
 

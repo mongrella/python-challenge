@@ -38,11 +38,22 @@ for row in csvreader:
 
 #Total number of votes each candidate won
 for i in range(len(candidate)):
-
+    if row[2] == candidate
 
 #percentage of votes each candidate won [Total number of votes per candidate / sum of votes]
 
 #Election winner based on popular vote [max value]
+winner = max(vote)
+
+
+#Print Findings
+print("Election Results")
+print("--------------------------------")
+print("Total Votes:" + str(votes)
+print("Total Revenue: $" + str(profit))
+print("Average Revenue Change: $" + str(average_profit_change))
+print("Greatest Increase in Profit:" + str(greatest_increase_month) + "($ " + str(greatest_increase) + ")")
+print("Greatest Decrease in Profit:" + str(greatest_decrease_month) + "($ " + str(greatest_decrease) + ")")
 
 # Specify the file to write to (txt file in the Analysis folder)
 

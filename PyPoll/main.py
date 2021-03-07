@@ -49,12 +49,12 @@ winner = max(vote)
 #Print Findings
 print("Election Results")
 print("--------------------------------")
-print("Total Votes:" + str(votes)
-print("Total Revenue: $" + str(profit))
-print("Average Revenue Change: $" + str(average_profit_change))
-print("Greatest Increase in Profit:" + str(greatest_increase_month) + "($ " + str(greatest_increase) + ")")
-print("Greatest Decrease in Profit:" + str(greatest_decrease_month) + "($ " + str(greatest_decrease) + ")")
-
+print(f"Total Votes:" + str(votes))
+print("--------------------------------")
+print(f"{candidate} {vote_percent}% ({votes})")
+print("--------------------------------")
+print(f"Winner: {winner}"")
+print("--------------------------------")
 # Specify the file to write to (txt file in the Analysis folder)
 
 output_path = os.path.join("..", "Analysis", "new_pypoll.txt")

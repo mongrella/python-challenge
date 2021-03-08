@@ -64,4 +64,14 @@ with open(output_path, "w", newline= '', encoding ='utf8') as datafile:
 
     #write output file
     writer.writerow([
+        ["Election Results"]
+        ["--------------------------------"]
+        [f"Total Votes:" + str(votes)]
+        ["--------------------------------"]
+        [f"{candidate} {vote_percent}% ({votes})"]
+        ["--------------------------------"]
+        [f"Winner: {winner}"]
+        ["--------------------------------"]
+    ])
+
         

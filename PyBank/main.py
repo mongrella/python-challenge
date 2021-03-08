@@ -5,7 +5,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv')
+csvpath = os.path.join('Resources', '02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv')
 
 # Open and read the CSV
 with open(csvpath) as csvfile:
@@ -16,9 +16,8 @@ with open(csvpath) as csvfile:
 
 #CSV file has to have two columns: Date and Profit/Losses
 #Create lists to store data
-output_rows = []
 date = []
-profit []
+profit = []
 total_profit_change = []
 average_profit_change = []
 

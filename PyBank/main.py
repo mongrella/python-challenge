@@ -1,3 +1,4 @@
+#As you can tell, I had a lot of trouble with both exercises but am submitting anyway in hopes of getting partial credit for my code
 # Import the os module to allow us to create file paths across operating systems
 import os
 
@@ -31,19 +32,21 @@ total_date = len(date)
 # Calculate the net total amount of "Profit/Losses" over the entire period
 #Iterate through rows to get average changes
 for i in range(len(profit)):
-    total_profit_change.append(profit[i+1]-profit[i])
+    #line below taken from: https://stackoverflow.com/questions/29483982/float-object-is-not-iterable
+    if type(i)== int or type(i)== float:
+        total_profit_change.append(int(profit[i]) - int(profit[i-1]))
     
 
 #Calculate the average of the changes in "Profit/Losses" over the entire period
-average_profit_change = sum(total_profit_change) / len(total_profit_change)
+        average_profit_change = sum(total_profit_change) / len(total_profit_change)
 
 #Calculate the greatest increase in profits (date/index and amount) over the entire period
-greatest_increase = max(average_profit_change)
-greatest_increase_month = average.profit.change.index(max(average_profit_change))
+        greatest_increase = max(average_profit_change)
+        greatest_increase_month = average.profit.change.index(max(average_profit_change))
 
 #Calculate The greatest decrease in losses (date/index and amount) over the entire period
-greatest_decrease = min(average_profit_change)
-greatest_decrease_month = average.profit.change.index(min(average_profit_change))
+        greatest_decrease = min(average_profit_change)
+        greatest_decrease_month = average.profit.change.index(min(average_profit_change))
 
 #Print Findings
 print("Financial Analysis")

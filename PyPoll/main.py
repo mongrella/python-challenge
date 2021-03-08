@@ -1,3 +1,5 @@
+#As you can tell, I had a lot of trouble with both exercises but am submitting anyway in hopes of getting partial credit for my code
+
 # Import the os module to allow us to create file paths across operating systems
 import os
 

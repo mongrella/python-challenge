@@ -7,25 +7,22 @@ import csv
 # Set path for file
 csvpath = os.path.join('Resources', '02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv')
 
-# Open and read the CSV
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-    # skip the first row of the CSV file
-    header = next(csvreader)
-
-
-#CSV file has to have two columns: Date and Profit/Losses
 #Create lists to store data
 date = []
 profit = []
 total_profit_change = []
 average_profit_change = []
 
+# Open and read the CSV
+with open(csvpath) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    # skip the first row of the CSV file
+    header = next(csvreader)
 #iterate through rows after first row (header)
-for row in csvreader:
-    #apppend to column extractions
-    date.append(row[0])
-    profit.append(row[1])
+    for row in csvreader:
+        #apppend to column extractions
+        date.append(row[0])
+        profit.append(row[1])
 
 
 # Calculate the total number of months included in the dataset

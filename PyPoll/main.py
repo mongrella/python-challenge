@@ -7,24 +7,22 @@ import csv
 # Set path for file
 csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv')
 
-
-# Open and read the CSV
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-    # skip the first row of the CSV file
-    header = next(csvreader)
-
 #Create lists to store data
 count_votes = 0
 votes = []
 candidate = []
 vote_percent = []
 
+# Open and read the CSV
+with open(csvpath) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    # skip the first row of the CSV file
+    header = next(csvreader)
 #Begin loop
 #Count total number of votes cast [Sum of votes]
-for row in csvreader:
+    for row in csvreader:
     #count total number of votes cast
-    count_votes = count_votes + 1
+        count_votes = count_votes + 1
 
 #list of candidates who received votes [Unique names in Column 2]
 #This portion of code from https://www.geeksforgeeks.org/python-get-unique-values-list/

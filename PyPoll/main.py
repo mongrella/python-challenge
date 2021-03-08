@@ -7,7 +7,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join('..', 'Resources', '02-Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv')
+csvpath = os.path.join('Resources', '02-Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv')
 
 #Create lists to store data
 count_votes = 0
@@ -41,7 +41,8 @@ for i in range(len(candidate)):
     if row[2] == candidate
 
 #percentage of votes each candidate won [Total number of votes per candidate / sum of votes]
-
+    vote_percent = (candidate/count_votes) * 100
+    
 #Election winner based on popular vote [max value]
 winner = max(vote)
 
